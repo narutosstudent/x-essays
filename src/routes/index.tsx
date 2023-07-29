@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
 
 export default component$(() => {
-  return <div>hello world</div>
+  return <div style={{ color: 'white' }}>hello world</div>
 })
 
 export const head: DocumentHead = {
