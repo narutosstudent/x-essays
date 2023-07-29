@@ -1,0 +1,24 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-top: var(--colors-white);
+  border-width: 2px;
+  height: 60px;
+  color: var(--colors-white);
+}
+
+footer p {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: calc(1rem * 18 / 16);
+  color: var(--colors-white);
+}
+
+footer a {
+  text-decoration: underline;
+  color: var(--colors-white);
+  margin-left: 4px;
+}
