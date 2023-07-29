@@ -17,6 +17,8 @@
     "outDir": "tmp",
     "noEmit": true,
     "types": ["node", "vite/client"],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "paths": {
       "~/*": ["./src/*"]
     }
