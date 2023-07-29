@@ -5,6 +5,7 @@ header {
   padding: 10px;
   justify-content: space-between;
   height: 60px;
+  box-shadow: 0 2px 3px var(--colors-white);
 }
 
 header h1 {
