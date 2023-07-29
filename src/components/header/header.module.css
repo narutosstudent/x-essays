@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: calc(1rem * 20 / 16);
+  color: var(--colors-white);
+}
+
+.header svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header span {
+  width: 24px;
+  height: 24px;
+}
