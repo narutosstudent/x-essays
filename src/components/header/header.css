@@ -1,23 +1,25 @@
-.header {
+header {
   display: flex;
+  align-items: center;
   width: 100%;
   padding: 10px;
   justify-content: space-between;
+  height: 60px;
 }
 
-.header h1 {
+header h1 {
   margin: 0 auto;
   font-weight: bold;
   font-size: calc(1rem * 20 / 16);
   color: var(--colors-white);
 }
 
-.header svg {
+header svg {
   width: 24px;
   height: 24px;
 }
 
-.header span {
+header span {
   width: 24px;
   height: 24px;
 }
