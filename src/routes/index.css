@@ -10,6 +10,7 @@ main {
   padding: 22px 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .input-wrapper input {
@@ -21,12 +22,14 @@ main {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   height: 40px;
+  font-size: calc(1rem * 14 / 16);
+  border-right: 0px;
 }
 
 .input-wrapper button {
   background-color: var(--colors-blue);
   height: 40px;
-  padding: 0 10px;
+  padding: 0 15px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
