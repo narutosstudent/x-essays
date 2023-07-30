@@ -1,0 +1,36 @@
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-wrapper {
+  width: 100%;
+  padding: 22px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 80%;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--colors-white);
+  border: 1px solid var(--colors-blue);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 40px;
+}
+
+.input-wrapper button {
+  background-color: var(--colors-blue);
+  height: 40px;
+  padding: 0 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.input-wrapper button svg path {
+  fill: var(--colors-black);
+}
