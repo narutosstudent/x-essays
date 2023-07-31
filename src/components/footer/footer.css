@@ -21,3 +21,13 @@ footer a {
   color: var(--colors-white);
   margin-left: 4px;
 }
+
+@media screen and (min-width: 768px) {
+  footer {
+    height: 75px;
+  }
+
+  footer p {
+    font-size: calc(1rem * 20 / 16);
+  }
+}
