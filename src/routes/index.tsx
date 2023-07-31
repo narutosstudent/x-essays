@@ -1,4 +1,4 @@
-import { component$, useSignal, useStyles$, useTask$ } from '@builder.io/qwik'
+import { component$, useStyles$, useTask$ } from '@builder.io/qwik'
 import { isServer } from '@builder.io/qwik/build'
 import type { DocumentHead } from '@builder.io/qwik-city'
 import { Form } from '@builder.io/qwik-city'
@@ -8,31 +8,19 @@ import styles from './index.css?inline'
 export default component$(() => {
   useStyles$(styles)
 
-  const mainHeight = useSignal(0)
-
   useTask$(() => {
     if (isServer) {
       return
     }
 
-    const windowHeight = window.innerHeight
-    const headerHeight = document.querySelector('header')!.offsetHeight
-    const footerHeight = (document.querySelector('footer') as HTMLElement)
-      .offsetHeight
-
-    const newMainHeight = windowHeight - headerHeight - footerHeight
-    mainHeight.value = newMainHeight
+    window.addEventListener('resize', () => {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    })
   })
 
   return (
-    <main
-      style={{
-        height:
-          mainHeight.value === 0
-            ? 'calc(100vh - 60px - 60px)'
-            : `${mainHeight}px`,
-      }}
-    >
+    <main>
       <Form class="input-wrapper">
         <input
           type="text"
