@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik'
+import { component$, useTask$ } from '@builder.io/qwik'
 import {
   QwikCityProvider,
   RouterOutlet,
@@ -9,6 +9,7 @@ import { RouterHead } from './components'
 import './global.css'
 
 import '@fontsource-variable/inter'
+import { isServer } from '@builder.io/qwik/build'
 
 export default component$(() => {
   /**
@@ -17,6 +18,17 @@ export default component$(() => {
    *
    * Don't remove the `<head>` and `<body>` elements.
    */
+
+  useTask$(() => {
+    if (isServer) {
+      return
+    }
+
+    window.addEventListener('resize', () => {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    })
+  })
 
   return (
     <QwikCityProvider>
